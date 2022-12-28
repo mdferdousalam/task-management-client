@@ -1,11 +1,13 @@
-import logo from './logo.svg';
+
 import './App.css';
-import AddTask from './components/AddTask';
+
+import router from './routes/Routes';
+import { RouterProvider } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <AddTask></AddTask>
+      <RouterProvider router={router} />
     </div>
   );
 }
