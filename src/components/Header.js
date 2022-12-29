@@ -21,7 +21,7 @@ const Header = () => {
                         <Link to='/completedtask' className="hidden mt-4 md:inline-block lg:mt-0 text-teal-200 hover:text-white">Completed Task</Link>
                     </div>
                     <div  >
-                        <Link className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-2 lg:mt-0  ">Sign In</Link>
+                        <Link to='/login' className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-2 lg:mt-0  ">Sign In</Link>
                     </div>
                 </div>
             </nav>

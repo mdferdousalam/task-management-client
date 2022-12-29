@@ -9,7 +9,7 @@ const MyTask = () => {
     useEffect(() => {
         // Send a GET request to the server to retrieve the tasks
         axios
-            .get("http://localhost:5000/api/tasks")
+            .get("https://task-management-server-bice.vercel.app/api/tasks")
             .then((response) => {
                 setTasks(response.data);
             })
@@ -21,7 +21,7 @@ const MyTask = () => {
     const handleUpdate = (taskId) => {
         // Send a PUT request to the server to update the task
         axios
-            .put(`http://localhost:5000/api/tasks/${taskId}`)
+            .put(`https://task-management-server-bice.vercel.app/api/tasks/${taskId}`)
             .then((response) => {
                 console.log(response.data);
             })
@@ -33,7 +33,7 @@ const MyTask = () => {
     const handleDelete = (taskId) => {
         // Send a DELETE request to the server to delete the task
         axios
-            .delete(`http://localhost:5000/api/tasks/${taskId}`)
+            .delete(`https://task-management-server-bice.vercel.app/api/tasks/${taskId}`)
             .then((response) => {
                 console.log(response.data);
                 window.location.reload();
@@ -47,7 +47,7 @@ const MyTask = () => {
     return (
 
         <div className=" mx-auto">
-            <table className="table-auto w-full">
+            <table className="table-auto w-full bg-teal-300">
                 <thead >
                     <tr className="mx-auto">
                         <th>SL</th>

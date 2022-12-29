@@ -9,7 +9,7 @@ const CompletedTask = () => {
     useEffect(() => {
         // Send a GET request to the server to retrieve the completed tasks
         axios
-            .get("http://localhost:5000/api/completed-tasks")
+            .get("https://task-management-server-bice.vercel.app/api/completed-tasks")
             .then((response) => {
                 setTasks(response.data);
             })
@@ -21,7 +21,7 @@ const CompletedTask = () => {
     const handleDelete = (taskId) => {
         // Send a DELETE request to the server to delete the task
         axios
-            .delete(`http://localhost:5000/api/completed-tasks/${taskId}`)
+            .delete(`https://task-management-server-bice.vercel.app/api/completed-tasks/${taskId}`)
             .then((response) => {
                 console.log(response.data);
             })
@@ -33,7 +33,7 @@ const CompletedTask = () => {
     const handleNotCompleted = (taskId) => {
         // Send a PUT request to the server to mark the task as not completed
         axios
-            .put(`http://localhost:5000/api/completed-tasks/${taskId}`)
+            .put(`https://task-management-server-bice.vercel.app/api/completed-tasks/${taskId}`)
             .then((response) => {
                 console.log(response.data);
             })

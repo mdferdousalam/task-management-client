@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import AddTask from "../components/AddTask";
 import CompletedTask from "../components/CompletedTask";
 import ErrorElement from "../components/ErrorElement";
+import Login from "../components/Login";
 import MyTask from "../components/MyTask";
 import Main from "../Layout/Main";
 
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
             {
                 path: '/completedtask',
                 element: <CompletedTask />
+            },
+            {
+                path: '/login',
+                element: <Login></Login>
             }
         ]
 

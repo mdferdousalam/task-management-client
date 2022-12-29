@@ -18,7 +18,7 @@ const AddTask = () => {
 
         // Send a POST request to the server to save the task and image
         axios
-            .post("http://localhost:5000/api/tasks", formData)
+            .post("https://task-management-server-bice.vercel.app/api/tasks", formData)
             .then((response) => {
                 console.log(response.data);
                 toast.success('Successfully added the task')
@@ -31,7 +31,7 @@ const AddTask = () => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <div className="text-center mx-auto flex flex-col justify-center items-center w-1/2 bg-sky-200">
+            <div className="text-center mx-auto flex flex-col justify-center items-center w-1/2 bg-teal-300">
                 <label className="font-bold pt-4" htmlFor="task">Task:</label>
                 <input
                     className="border-2 border-red-700 p-6 my-6 w-full"
