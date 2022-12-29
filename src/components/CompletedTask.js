@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import UseTitle from "../hooks/UseTitle";
 
 const CompletedTask = () => {
+    UseTitle('Completed Task')
     const [tasks, setTasks] = useState([]);
 
     useEffect(() => {

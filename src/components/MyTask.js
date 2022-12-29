@@ -36,6 +36,8 @@ const MyTask = () => {
             .delete(`http://localhost:5000/api/tasks/${taskId}`)
             .then((response) => {
                 console.log(response.data);
+                window.location.reload();
+
             })
             .catch((error) => {
                 console.error(error);
@@ -43,15 +45,36 @@ const MyTask = () => {
     };
 
     return (
-        <ul>
-            {tasks.map((task) => (
-                <li key={task._id}>
-                    {task.task}
-                    <button className="border-2 border-red-700 rounded px-3 mx-4 my-4" onClick={() => handleUpdate(task._id)}>Update</button>
-                    <button className="border-2 border-red-700 rounded px-3 mx-4 my-4" onClick={() => handleDelete(task._id)}>Delete</button>
-                </li>
-            ))}
-        </ul>
+
+        <div className=" mx-auto">
+            <table className="table-auto w-full">
+                <thead >
+                    <tr className="mx-auto">
+                        <th>SL</th>
+                        <th>Task Name</th>
+                        {/* <th>Image</th> */}
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {tasks.map((task, index) => (
+
+                        <tr className="text-center" key={task._id}>
+                            {console.log(task)}
+                            <td>{index + 1}</td>
+                            <td>{task.task}</td>
+                            {/* <td><img src={task.image} alt="" /></td> */}
+                            <td><button className="border-2 border-red-700 rounded px-3 " onClick={() => handleUpdate(task._id)}>Update</button></td>
+                            <td><button className="border-2 border-red-700 rounded px-3 " onClick={() => handleDelete(task._id)}>Delete</button></td>
+                        </tr>
+                    ))}
+
+                </tbody>
+            </table>
+
+        </div>
+
     );
 };
 
